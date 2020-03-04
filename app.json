@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/edit/edit",
+    "pages/index/order/order",
+    "pages/index/express/express",
+    "pages/register/register"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "navigationStyle":"custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

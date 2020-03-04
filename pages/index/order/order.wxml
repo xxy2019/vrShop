@@ -1,0 +1,13 @@
+<view class="head" style="background-color:#638E88;">
+  <navigator  url="../index">
+    <image mode="aspectFit" src="../../../icon/back.png" class="back"></image>
+    <view class="head_title">更新订单</view>
+  </navigator>
+</view>
+<view>
+  <view class="card" wx:for="{{list}}" wx:key="{{index}}" bindtap="update" data-pack="{{item}}">
+    <view class="title">商家<view class="content">{{item.seller}}</view></view>
+    <view class="line">收件人:<view class="content">{{item.username}}</view></view>
+    <view class="line">下单时间:<view class="content">{{item.time}}</view></view>
+  </view>
+</view>

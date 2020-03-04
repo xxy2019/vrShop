@@ -1,0 +1,65 @@
+<view class="head" style="background-color:#638E88;">
+  <navigator  url="../index">
+    <image mode="aspectFit" src="../../../icon/back.png" class="back"></image>
+    <view class="head_title">修改信息</view>
+  </navigator>
+</view>
+<image class="bg" src="../../../img/edit-bg.png"></image>
+<view class="edit">
+  <view class="card">
+      <view class="weui-cell">
+          <view class="weui-cell__hd">
+              <image src="../../../icon/information-active.png" style="margin-right: 32rpx;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+          </view>
+          <view class="weui-cell__bd">修改信息</view>
+      </view>
+      <form bindsubmit="formSubmit">
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <picker bindchange="bindPickerChange" value="{{pickindex}}" range="{{array}}">
+              <view class="picker">
+                请选择要修改的信息：{{array[pickindex]}}
+              </view>
+            </picker>
+          </view>
+          <view class="weui-cell">
+              <view class="weui-cell__hd">
+                  <view class="weui-label" style="width:160rpx">商家名称</view>
+              </view>
+              <view class="weui-cell__bd">
+                  <input class="weui-input" type="text" value="{{seller}}" disabled="true"/>
+              </view>
+          </view>
+          <view class="weui-cell" hidden="{{!isHide}}">
+              <view class="weui-cell__hd">
+                  <view class="weui-label" style="width:160rpx">密码</view>
+              </view>
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="text" password="true" name="password"/>
+              </view>
+          </view>
+          <view class="weui-cell" hidden="{{!isHide}}">
+              <view class="weui-cell__hd">
+                  <view class="weui-label" style="width:160rpx">确认密码</view>
+              </view>
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="text" password="true" bindblur="getPwd"/>
+              </view>
+          </view>
+          <view class="weui-cell" hidden="{{isHide}}">
+              <view class="weui-cell__hd">
+                  <view class="weui-label" style="width:160rpx">手机号</view>
+              </view>
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="number" bindblur="getPhone" name="phone"/>
+              </view>
+          </view>
+          <view class="weui-cell" hidden="{{isHide}}">
+            <input type="text" class="my_code" bindblur="codeInput"/>
+            <button size="mini" class="code_btn" bindtap="getCode">获取验证码</button>
+          </view>
+          <button form-type="submit" class="weui-btn" type="primary">修改</button>
+        </view>
+      </form>
+  </view>
+</view>

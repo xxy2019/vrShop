@@ -1,0 +1,32 @@
+<image class="bg" src="../../img/index-bg.png"></image>
+<view class="index">
+  <view class="login" hidden="{{isHide}}">
+    <view class="title">Vr商城小程序</view> 
+    <form bindsubmit="formSubmit">
+      <input type="text" name="seller" placeholder="商家名称" class="loginInput" value="{{value}}"/>
+      <input type="text" name="password" password="true" placeholder="密码" value="{{value}}" class="loginInput"/>
+      <button class="loginBtn" form-type="submit">登录</button>
+    </form>
+    <navigator class="register" url="../register/register?title=register">注册</navigator>
+    <navigator class="forget" url="../register/register">忘记密码</navigator>  
+  </view>
+  <view style="padding:20rpx;margin-top:330rpx" hidden="{{!isHide}}">
+    <view class="login_title">Vr商城小程序</view>
+    <navigator class="card" url="./express/express">
+      <view class="picture" style="background-color:#5FDF7E"><image mode="aspectFit" class="Icon" src="../../icon/express.png"/></view>
+      查找快递
+    </navigator>
+    <navigator class="card" url="./order/order">
+      <view class="picture" style="background-color:#42AEF2"><image mode="aspectFit" class="Icon" src="../../icon/order.png"/></view>
+      更新订单
+    </navigator>
+     <navigator class="card" url="./edit/edit">
+      <view class="picture" style="background-color:#F1B74B"><image mode="aspectFit" class="Icon" src="../../icon/edit.png"/></view>
+      修改信息
+     </navigator>
+     <navigator class="card" open-type="exit" target="miniProgram">
+      <view class="picture" style="background-color:#E94242;"><image mode="aspectFit" class="Icon" src="../../icon/exit.png"/></view>
+      退出
+     </navigator>
+  </view>
+</view>
