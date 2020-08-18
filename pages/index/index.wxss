@@ -21,19 +21,6 @@
   font-size: 50rpx;
   margin-bottom: 50rpx;
 }
-.register{
-  font-size: 32rpx;
-  color: #00C4B2;
-  margin: 30rpx 10rpx 0 0;
-  display: inline;
-}
-.forget{
-  text-align: right;
-  font-size: 32rpx;
-  color: #00C4B2;
-  display: inline;
-  margin-left: 390rpx;
-}
 .loginInput{
   font-size: 38rpx;
   border: 1rpx solid #f2f2f2;
@@ -44,35 +31,4 @@
 .loginBtn{
   background-color: #00C4B2;
   color: #fff;
-}
-.card{
-  width: 280rpx;
-  height: 280rpx;
-  background-color: rgba(242, 242,242, .3);
-  border-radius: 20rpx;
-  float: left;
-  text-align: center;
-  margin: 0 0 30rpx 50rpx;
-  color: #fff;
-}
-.login_title{
-  font-size: 40rpx;
-  color: #fff;
-  position: relative;
-  top: -160rpx;
-  left: 240rpx;
-}
-.picture{
-  overflow:hidden;  
-  display: block;  
-  width: 150rpx;  
-  height: 150rpx;   
-  border-radius: 50%;  
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  margin:30rpx 0 20rpx 52rpx; 
-}
-.Icon{
-  margin-top:26rpx;
-  width: 90rpx;
-  height: 90rpx;
 }

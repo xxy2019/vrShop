@@ -1,4 +1,4 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "Vr商城小程序"
+  "navigationStyle": "custom"
 }

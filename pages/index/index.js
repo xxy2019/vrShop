@@ -5,27 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isHide:false,
     value:"" 
   },
   formSubmit:function(e){
     var _this=this
     var user=e.detail.value
+    console.log(user)
     var app=getApp()
     this.personLogin(user).then((res)=>{
-      if (res !="登录为空"){
+      if(res== "登录为空"){
+        wx.showToast({
+          title: '账号或密码错误！！！',
+          icon: "none",
+          duration: 2000
+        })
+      } else if (JSON.stringify(res).length==11){
         app.globalData.phone = res
         app.globalData.userStatus = "login"
         app.globalData.seller = user.seller
-        _this.setData({
-          value: ""
+        wx.switchTab({
+          url: '../express/express',
         })
-        _this.onLoad()
       }
     })
   },
   personLogin: function (e) {
     var msg=JSON.stringify(e)
+    console.log(typeof msg)
     return new Promise(function (resolve, reject) {
       wx.request({
         url: 'http://47.104.191.228:8028/seller/login',
@@ -46,9 +52,6 @@ Page({
       })
     })
   },
-  register:function(){
-    
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -56,16 +59,6 @@ Page({
     var _this = this;
     var app = getApp();     // 取得全局App
     console.log(app.globalData.userStatus)
-    if (app.globalData.userStatus == "notLogin") {
-      _this.setData({
-        "isHide": false
-      })
-    } else {
-      _this.setData({
-        "isHide": true
-      })
-    }
-    console.log(this.data.isHide)
   },
 
   /**

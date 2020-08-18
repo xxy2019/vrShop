@@ -1,17 +1,47 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/edit/edit",
-    "pages/index/order/order",
-    "pages/index/express/express",
-    "pages/register/register"
-    
+    "pages/publish/publish",
+    "pages/express/express",
+    "pages/order/order",
+    "pages/order/details/details"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#628D87",
+    "navigationBarTitleText": "Vr商城",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true,
-    "navigationStyle":"custom"
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#628D87",
+    "list": [
+      {
+        "pagePath": "pages/express/express",
+        "text": "商品",
+        "iconPath": "./icon/express.png",
+        "selectedIconPath": "./icon/express-active.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布商品",
+        "iconPath": "./icon/publish.png",
+        "selectedIconPath": "./icon/publish-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./icon/order.png",
+        "selectedIconPath": "./icon/order-active.png"
+      }
+    ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.1",
+      "provider": "wx069ba97219f66d99"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,27 @@
+<import src="../../templates/search/search.wxml"></import>
+<view>
+  <template is="search" data="{{inputShowed,inputVal,real_timeSearch}}"></template>
+  <view class="card" wx:for="{{list}}" wx:key="{{index}}">
+    <image class="photo" data-no="{{item.no}}" bindtap="changeImg" mode="aspectFit" src="{{item.photo}}"></image>
+    <view class="right">
+      <view class="title">商品名称<view class="content" bindlongtap="btn" data-number="1" data-good="{{item}}">{{item.name}}</view></view>
+      <view class="line">商品库存:<view class="content" bindlongtap="btn" data-number="2" data-good="{{item}}">{{item.inventory}}</view></view>
+      <view class="line">商品价格:<view class="content" bindlongtap="btn" data-number="3" data-good="{{item}}">{{item.price}}</view></view>
+      <view class="line">商品详情:<view class="content" bindlongtap="btn" data-number="4"  data-good="{{item}}">{{item.detail}}</view></view>
+    </view> 
+  </view>
+</view>
+<!-- 遮罩层 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+<!-- 二维码或其他图片 -->
+    <text class="Dlg_title">修改信息</text>
+    <input value="{{value}}" class="text" bindinput="changeValue"></input>
+    <view style="display:flex">
+      <view bindtap="cancel" class="ok">取消</view>
+      <view bindtap="ok" class="ok">确定</view>
+    </view>  
+</view>
+
+

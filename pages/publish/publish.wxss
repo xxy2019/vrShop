@@ -1,0 +1,65 @@
+.my_form{
+  margin: 20rpx;
+  font-size: 36rpx;
+}
+.card{
+  background-color:#fff;
+  padding: 20rpx;
+}
+.title{
+  color: #aaa;
+}
+.content{
+  border-bottom:1rpx solid #aaa;
+  color: #333;
+  margin-bottom: 18rpx;
+  height: 74rpx;
+}
+.photo_input{
+  border-radius:9rpx;
+  margin-bottom: 18rpx;
+  padding:20rpx;
+  align-items: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.photo{
+  width: 30%;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+.photo_btn{
+  width: 30%;
+  height: 200rpx;
+  background-color: #fff;
+  border: dashed 1rpx #333;
+  font-size: 200rpx;
+  color: #999;
+  line-height: 150rpx;
+  text-align: center;
+}
+.description_input{
+  height: 200rpx;
+  margin: 20rpx 0;
+}
+view.weui-cell{
+  padding: 0;
+}
+.weui-form-preview{
+  margin-bottom: 25px;
+}
+view.weui-form-preview__label{
+  min-width: 0;
+  color: #333;
+}
+.card{
+  background-color:#fff;
+  margin-top:20rpx;
+}
+.my_btn{
+  width: 50%;
+  background-color: #628D87;
+  color: #fff;
+  font-size: 36rpx;
+}

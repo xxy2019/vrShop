@@ -1,0 +1,43 @@
+<view>
+  <form bindsubmit="formSubmit">
+    <view class="my_form">
+      <view class="card">
+        <view class="title">商品名称</view>
+        <input class="content" type="text" value="{{value}}" name="name"></input>
+        <view class="title">商品编号</view>
+        <input class="content" type="number" value="{{value}}" name="no"></input>
+        <view class="title">商品价格</view>
+        <input class="content" type="number" value="{{value}}" name="price"></input>
+        <view class="title">库存</view>
+        <input class="content" type="number" value="{{value}}" name="inventory"></input>
+        <view class="title">生产厂家</view>
+        <input class="content" type="text" value="{{value}}" name="manufactures"></input>
+        <view class="title">生产日期</view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2099-05-01" bindchange="bindDateChange">
+          <view class="picker content">
+            {{date}}
+          </view>
+        </picker>
+      </view>    
+      <view class="card">
+        <view class="title">商品图片</view>
+        <view class="photo_input">
+          <image wx:if="{{img}}" src="{{img}}" mode="aspectFit" class="photo"/>
+          <view bindtap="getPhoto" wx:if="{{!img}}" class="photo_btn">+</view>
+        </view>
+      </view>
+      <view class="card">
+        <view class="title">商品概述</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__bd">
+                  <textarea class="weui-textarea description_input" value="{{value}}" placeholder="请具体描述您的商品" name="detail"/>
+              </view>
+          </view>
+        </view>
+      </view> 
+    </view>
+    <button form-type="submit" class="my_btn">确定发布</button>
+  </form>
+</view>
+
